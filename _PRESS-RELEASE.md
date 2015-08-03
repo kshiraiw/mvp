@@ -19,26 +19,40 @@ Once the project moves into development, the press release can be used as a touc
 ## Heading ##
   > Name the product in a way the reader (i.e. your target customers) will understand.
 
+  The product will find and show the filming location for movies. Later features will be able to sort movies by filming location.
+
 ## Sub-Heading ##
   > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
 
+  The product is for curious movie lovers. Great for trivia!
 ## Summary ##
   > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
+
+  Did you ever want to know where your favorite movie was filmed? Want to know random facts about your city? This product shows filming locations and you can sort it by movie!
 
 ## Problem ##
   > Describe the problem your product solves.
 
+  The project will solve the problem of curing boredom and satisfying curious minds.
 ## Solution ##
   > Describe how your product elegantly solves the problem.
+
+  It gives an interesting way of killing time and finding out about their favorite movies.
 
 ## Quote from You ##
   > A quote from a spokesperson in your company.
 
+  "The perfect cure for weekend boredom."
 ## How to Get Started ##
   > Describe how easy it is to get started.
 
+  Just log in and enter your favorite movie.
 ## Customer Quote ##
   > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
 
+  "Super interesting!"
+
 ## Closing and Call to Action ##
   > Wrap it up and give pointers where the reader should go next.
+
+Go and try it out!
