@@ -1,0 +1,20 @@
+.movie-img {
+  display: inline-block;
+  max-height: 150px;
+  width:auto;
+}
+
+.movie-info {
+  display: inline-block;
+}
+
+
+
+.movie-display {
+  height: 150px;
+  margin: 10px;
+}
+
+iframe {
+  margin: 20px 0;
+}

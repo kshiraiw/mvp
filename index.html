@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+  <title></title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+  <ul class="nav nav-tabs nav-justified">
+    <li><a ui-sref="allMovies">See All Movies</a></li>
+    <li><a ui-sref="addMovie">Search By Movie</a></li>
+  </ul>
+  <div ui-view></div>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular-route.min.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js'></script>
+  <script src="key.js"></script>
+  <script src="services/services.js"></script>
+  <script src="movie/movie.js"></script>
+  <script src="addMovie/addMovie.js"></script>
+  <script src="allMovies/allMovies.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

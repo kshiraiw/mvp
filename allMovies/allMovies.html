@@ -1,0 +1,6 @@
+<input class="form-control" type="text" ng-model="query.location" placeholder="Enter a location">
+<div class="movie-display" ng-repeat="movie in movies | filter:query">
+  <img class="movie-img col-xs-3" ng-src="{{movie.posterUrl}}">
+  <p class="movie-info col-xs-8">{{movie.title}} - {{movie.location}}</p>
+  <p class="movie-info col-xs-8"><a href="http://localhost:8080/#/movie/{{movie.title}}">More Info</a>
+</div>

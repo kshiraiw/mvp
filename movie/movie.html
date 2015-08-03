@@ -1,0 +1,21 @@
+
+  <div ng-show="movieError">No Match found</div>
+  <div class ="container" ng-if="isLoaded">
+    <div class="col-sm-6">
+      <h1>{{movie.title}}</h1>
+      <p ng-show="movie.location">Filming Location: {{movie.location}}</p>
+      <p ng-show="movie.plot">Plot: {{movie.plot}}</p>
+      <p ng-show="movie.rating">Rated: {{movie.rating}}</p>
+      <a href="{{movie.IMDBurl}}">More info on IMDB</a>
+
+      <center><img ng-src="{{movie.posterUrl}}"></center>
+    </div>
+    <div class="col-sm-6">
+      <center>
+        <iframe ng-show="movie.location" width="600" height="450"
+          frameborder="0" style="border:0"
+          ng-src="{{url}}"
+        ></iframe>
+      </center>
+    </div>
+  </div>

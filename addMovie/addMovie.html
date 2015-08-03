@@ -1,0 +1,24 @@
+
+    <form class="navbar-form navbar-right" name="movieForm" ng-submit="sendMovie()">
+      <div class="form-group">
+        <input class="form-control" ng-model="movie.title" id="movie" type="text" placeholder="Enter a movie" required>
+        <input class="form-control btn btn-primary" type="submit" ng-disabled="isSaving || movieForm.$invalid">
+    </form>
+  <div ng-show="isSaving">
+    <img src="assets/spiffygif_46x46.gif">
+  </div>
+  <div ng-show="movieError">No Match found</div>
+  <div class ="container" ng-if="movie.isLoaded">
+    
+    <p>Title: {{movie.title}}</p>
+    <p ng-show="movie.location">Filming Location: {{movie.location}}</p>
+    <p ng-show="movie.plot">Plot: {{movie.plot}}</p>
+    <p ng-show="movie.rating">Rated: {{movie.rating}}</p>
+    <a href="{{movie.IMDBurl}}">More info on IMDB</a>
+
+    <center><img ng-src="{{movie.posterUrl}}"></center>
+    <iframe ng-show="movie.location" width="600" height="450"
+      frameborder="0" style="border:0"
+      ng-src="{{url}}"
+    ></iframe>
+  </div>
