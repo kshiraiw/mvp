@@ -52,7 +52,6 @@ module.exports.handleGetAll = function(req, res) {
 module.exports.searchTrailer = function(req, res) {
   youTube.search(req.body.title + " trailer", 1, function(err, results) {
     if (err) {console.log(err);}
-    console.log("RESULTS FROM YOUTUBE", results)
     res.send(results);
   });
 };
