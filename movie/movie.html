@@ -1,7 +1,7 @@
 
   <div ng-show="movieError">No Match found</div>
   <div class ="container" ng-if="isLoaded">
-    <div class="col-sm-6">
+    <div ng-class="movie.location ? 'col-sm-6' : 'col-sm-12'">
       <h1>{{movie.title}}</h1>
       <p ng-show="movie.location">Filming Location: {{movie.location}}</p>
       <p ng-show="movie.plot">Plot: {{movie.plot}}</p>

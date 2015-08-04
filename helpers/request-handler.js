@@ -2,9 +2,8 @@ var Movie = require('../db/config');
 var request = require('request');
 
 module.exports.handleAdd = function(req, res) {
-  var val = req.body.title;
-  console.log(val);
-  Movie.findOne({title: {$regex: new RegExp(val, 'i')}}).exec(function(err, movie) {
+  var val = req.body.title.toUpperCase();
+  Movie.findOne({where: {title: val}}).then(function(movie) {
     if (movie) {
       return res.status(200).send(movie);
     } else {
@@ -14,14 +13,14 @@ module.exports.handleAdd = function(req, res) {
         body = JSON.parse(body);
 
         if (!body[0]) {res.send(null);}
-        var movie = new Movie({
-          title: body[0].title,
-          location: body[0].filmingLocations,
+        Movie.create({
+          title: body[0].title.toUpperCase(),
+          location: body[0].filmingLocations.join(' '),
           plot: body[0].simplePlot,
           rating: body[0].rated,
           IMDBurl: body[0].urlIMDB,
           posterUrl: body[0].urlPoster
-        }).save(function(err, movie) {
+        }).then(function(movie) {
           res.status(200).send(movie);
         });
       });
@@ -31,7 +30,7 @@ module.exports.handleAdd = function(req, res) {
 
 module.exports.handleGetOne = function(req, res) {
   var title = req.body.title;
-  Movie.findOne({title: {$regex: new RegExp(title, 'i')}}).exec(function(err, movie) {
+  Movie.findOne({where: {title: title}}).then(function(movie) {
     if (movie) {
       return res.status(200).send(movie);
     } else {
@@ -41,7 +40,7 @@ module.exports.handleGetOne = function(req, res) {
 };
 
 module.exports.handleGetAll = function(req, res) {
-  Movie.find({}).exec(function(err, movies) {
+  Movie.findAll().then(function(movies) {
     console.log(movies);
     res.status(200).send(movies);
   });

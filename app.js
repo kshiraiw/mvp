@@ -1,4 +1,4 @@
-var app = angular.module("app", ['ui.router', 'app.services', 'app.addMovie', 'app.allMovies', 'app.movie']);
+var app = angular.module("app", ['ui.router', 'app.services', 'app.addMovie', 'app.allMovies', 'app.movie', 'ngAnimate']);
 
 app.config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
