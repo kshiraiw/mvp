@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 app.post('/addMovie', helpers.handleAdd);
 app.post('/getMovie', helpers.handleGetOne);
-
+app.post('/searchTrailer', helpers.searchTrailer);
 app.get('/getMovies', helpers.handleGetAll);
 
 var port = process.env.PORT || 8080;

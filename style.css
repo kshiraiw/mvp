@@ -1,3 +1,6 @@
+.show-movies {
+  padding-right: 15px;
+}
 .movie-img {
   display: inline-block;
   max-height: 150px;
@@ -6,13 +9,29 @@
   box-sizing:border-box;
 }
 
-.movie-info {
+.movie-info strong {
+  color: darkblue;
   display: inline-block;
+  padding: 15% 0;
 }
 
 .movie-display {
   height: 150px;
-  margin: 10px;
+  margin: 10px 0;
+  display: inline-block;
+  background: #eee;
+}
+
+.movie-display:hover {
+  background: #dfdfdf;
+}
+
+.inner-padding {
+  width: 15px;
+  height: 100%;
+  background: #fff;
+  position: relative;
+  left: -15px;
 }
 
 iframe {

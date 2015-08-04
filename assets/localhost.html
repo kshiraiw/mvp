@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<!-- saved from url=(0033)http://localhost:8080/#/allMovies -->
+<html ng-app="app" class="ng-scope"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+  <title></title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+  <link href="http://localhost:8080/style.css" rel="stylesheet">
+<style type="text/css"></style></head>
+<body>
+  <ul class="nav nav-tabs nav-justified">
+    <li><a ui-sref="allMovies" href="./localhost_files/localhost.html">See All Movies</a></li>
+    <li><a ui-sref="addMovie" href="http://localhost:8080/#/addMovie">Add Movie</a></li>
+  </ul>
+  <!-- uiView:  --><div ui-view="" class="ng-scope"><input class="form-control ng-pristine ng-untouched ng-valid ng-scope" type="text" ng-model="query.location" placeholder="Enter a location">
+<input class="form-control ng-pristine ng-untouched ng-valid ng-scope" type="text" ng-model="query.title" placeholder="Enter movie title">
+<!-- ngRepeat: movie in movies | orderBy: 'title' | filter:query as results --><div class="col-xs-12 col-sm-6 movie-display animate-repeat ng-scope" ng-repeat="movie in movies | orderBy: &#39;title&#39; | filter:query as results " style="">
+  <!-- ngIf: movie.posterUrl --><img ng-if="movie.posterUrl" class="movie-img col-xs-3 ng-scope" ng-src="http://ia.media-imdb.com/images/M/MV5BMTQ4NDQ4OTUzOV5BMl5BanBnXkFtZTcwMjMzMTUyNw@@._V1_SY317_CR15,0,214,317_AL_.jpg" src="./localhost_files/MV5BMTQ4NDQ4OTUzOV5BMl5BanBnXkFtZTcwMjMzMTUyNw@@._V1_SY317_CR15,0,214,317_AL_.jpg"><!-- end ngIf: movie.posterUrl -->
+  <!-- ngIf: !movie.posterUrl -->
+  <p class="movie-info col-xs-8"><strong class="ng-binding">30 Rock</strong></p>
+  <p class="movie-info col-xs-8"><a href="http://localhost:8080/#/movie/30 Rock">More Info</a></p>
+</div><!-- end ngRepeat: movie in movies | orderBy: 'title' | filter:query as results --><div class="col-xs-12 col-sm-6 movie-display animate-repeat ng-scope" ng-repeat="movie in movies | orderBy: &#39;title&#39; | filter:query as results " style="">
+  <!-- ngIf: movie.posterUrl --><img ng-if="movie.posterUrl" class="movie-img col-xs-3 ng-scope" ng-src="http://ia.media-imdb.com/images/M/MV5BMjAwMzc4MDgxNF5BMl5BanBnXkFtZTYwNjUwMzE3._V1_SX214_AL_.jpg" src="./localhost_files/MV5BMjAwMzc4MDgxNF5BMl5BanBnXkFtZTYwNjUwMzE3._V1_SX214_AL_.jpg"><!-- end ngIf: movie.posterUrl -->
+  <!-- ngIf: !movie.posterUrl -->
+  <p class="movie-info col-xs-8"><strong class="ng-binding">50 First Dates</strong></p>
+  <p class="movie-info col-xs-8"><a href="http://localhost:8080/#/movie/50 First Dates">More Info</a></p>
+</div><!-- end ngRepeat: movie in movies | orderBy: 'title' | filter:query as results --><div class="col-xs-12 col-sm-6 movie-display animate-repeat ng-scope" ng-repeat="movie in movies | orderBy: &#39;title&#39; | filter:query as results " style="">
+  <!-- ngIf: movie.posterUrl --><img ng-if="movie.posterUrl" class="movie-img col-xs-3 ng-scope" ng-src="http://ia.media-imdb.com/images/M/MV5BMjA2NDA3MzM0M15BMl5BanBnXkFtZTcwODA5NzQ5MQ@@._V1_SY317_CR5,0,214,317_AL_.jpg" src="./localhost_files/MV5BMjA2NDA3MzM0M15BMl5BanBnXkFtZTcwODA5NzQ5MQ@@._V1_SY317_CR5,0,214,317_AL_.jpg"><!-- end ngIf: movie.posterUrl -->
+  <!-- ngIf: !movie.posterUrl -->
+  <p class="movie-info col-xs-8"><strong class="ng-binding">Azumi 2: Death or Love</strong></p>
+  <p class="movie-info col-xs-8"><a href="http://localhost:8080/#/movie/Azumi 2: Death or Love">More Info</a></p>
+</div><!-- end ngRepeat: movie in movies | orderBy: 'title' | filter:query as results --><div class="col-xs-12 col-sm-6 movie-display animate-repeat ng-scope" ng-repeat="movie in movies | orderBy: &#39;title&#39; | filter:query as results " style="">
+  <!-- ngIf: movie.posterUrl --><img ng-if="movie.posterUrl" class="movie-img col-xs-3 ng-scope" ng-src="http://ia.media-imdb.com/images/M/MV5BMjA4MDQ0Nzc3N15BMl5BanBnXkFtZTYwMTkzODk4._V1_SY317_CR2,0,214,317_AL_.jpg" src="./localhost_files/MV5BMjA4MDQ0Nzc3N15BMl5BanBnXkFtZTYwMTkzODk4._V1_SY317_CR2,0,214,317_AL_.jpg"><!-- end ngIf: movie.posterUrl -->
+  <!-- ngIf: !movie.posterUrl -->
+  <p class="movie-info col-xs-8"><strong class="ng-binding">Balto</strong></p>
+  <p class="movie-info col-xs-8"><a href="http://localhost:8080/#/movie/Balto">More Info</a></p>
+</div><!-- end ngRepeat: movie in movies | orderBy: 'title' | filter:query as results --><div class="col-xs-12 col-sm-6 movie-display animate-repeat ng-scope" ng-repeat="movie in movies | orderBy: &#39;title&#39; | filter:query as results " style="">
+  <!-- ngIf: movie.posterUrl --><img ng-if="movie.posterUrl" class="movie-img col-xs-3 ng-scope" ng-src="http://ia.media-imdb.com/images/M/MV5BNTM3OTc0MzM2OV5BMl5BanBnXkFtZTYwNzUwMTI3._V1_SX214_AL_.jpg" src="./localhost_files/MV5BNTM3OTc0MzM2OV5BMl5BanBnXkFtZTYwNzUwMTI3._V1_SX214_AL_.jpg"><!-- end ngIf: movie.posterUrl -->
+  <!-- ngIf: !movie.posterUrl -->
+  <p class="movie-info col-xs-8"><strong class="ng-binding">Batman Begins</strong></p>
+  <p class="movie-info col-xs-8"><a href="http://localhost:8080/#/movie/Batman Begins">More Info</a></p>
+</div><!-- end ngRepeat: movie in movies | orderBy: 'title' | filter:query as results --><div class="col-xs-12 col-sm-6 movie-display animate-repeat ng-scope" ng-repeat="movie in movies | orderBy: &#39;title&#39; | filter:query as results " style="">
+  <!-- ngIf: movie.posterUrl --><img ng-if="movie.posterUrl" class="movie-img col-xs-3 ng-scope" ng-src="http://ia.media-imdb.com/images/M/MV5BMzIxMDkxNDM2M15BMl5BanBnXkFtZTcwMDA5ODY1OQ@@._V1_SX214_AL_.jpg" src="./localhost_files/MV5BMzIxMDkxNDM2M15BMl5BanBnXkFtZTcwMDA5ODY1OQ@@._V1_SX214_AL_.jpg"><!-- end ngIf: movie.posterUrl -->
+  <!-- ngIf: !movie.posterUrl -->
+  <p class="movie-info col-xs-8"><strong class="ng-binding">Batman: The Dark Knight Returns, Part 1</strong></p>
+  <p class="movie-info col-xs-8"><a href="http://localhost:8080/#/movie/Batman: The Dark Knight Returns, Part 1">More Info</a></p>
+</div><!-- end ngRepeat: movie in movies | orderBy: 'title' | filter:query as results --><div class="col-xs-12 col-sm-6 movie-display animate-repeat ng-scope" ng-repeat="movie in movies | orderBy: &#39;title&#39; | filter:query as results " style="">
+  <!-- ngIf: movie.posterUrl --><img ng-if="movie.posterUrl" class="movie-img col-xs-3 ng-scope" ng-src="http://ia.media-imdb.com/images/M/MV5BMTgwODU4MTg5M15BMl5BanBnXkFtZTcwNjM2NjkxMQ@@._V1_SY317_CR4,0,214,317_AL_.jpg" src="./localhost_files/MV5BMTgwODU4MTg5M15BMl5BanBnXkFtZTcwNjM2NjkxMQ@@._V1_SY317_CR4,0,214,317_AL_.jpg"><!-- end ngIf: movie.posterUrl -->
+  <!-- ngIf: !movie.posterUrl -->
+  <p class="movie-info col-xs-8"><strong class="ng-binding">Big Daddy</strong></p>
+  <p class="movie-info col-xs-8"><a href="http://localhost:8080/#/movie/Big Daddy">More Info</a></p>
+</div><!-- end ngRepeat: movie in movies | orderBy: 'title' | filter:query as results --><div class="col-xs-12 col-sm-6 movie-display animate-repeat ng-scope" ng-repeat="movie in movies | orderBy: &#39;title&#39; | filter:query as results " style="">
+  <!-- ngIf: movie.posterUrl --><img ng-if="movie.posterUrl" class="movie-img col-xs-3 ng-scope" ng-src="http://ia.media-imdb.com/images/M/MV5BMTU0NTg3MzUxOF5BMl5BanBnXkFtZTgwMjcxNjcxMTE@._V1_SY317_CR0,0,214,317_AL_.jpg" src="./localhost_files/MV5BMTU0NTg3MzUxOF5BMl5BanBnXkFtZTgwMjcxNjcxMTE@._V1_SY317_CR0,0,214,317_AL_.jpg"><!-- end ngIf: movie.posterUrl -->
+  <!-- ngIf: !movie.posterUrl -->
+  <p class="movie-info col-xs-8"><strong class="ng-binding">Billy Elliot</strong></p>
+  <p class="movie-info col-xs-8"><a href="http://localhost:8080/#/movie/Billy Elliot">More Info</a></p>
+</div><!-- end ngRepeat: movie in movies | orderBy: 'title' | filter:query as results --><div class="col-xs-12 col-sm-6 movie-display animate-repeat ng-scope" ng-repeat="movie in movies | orderBy: &#39;title&#39; | filter:query as results " style="">
+  <!-- ngIf: movie.posterUrl --><img ng-if="movie.posterUrl" class="movie-img col-xs-3 ng-scope" ng-src="http://ia.media-imdb.com/images/M/MV5BMTgwNDg1NjUxN15BMl5BanBnXkFtZTgwOTg0NzQxMTE@._V1_SY317_CR0,0,214,317_AL_.jpg" src="./localhost_files/MV5BMTgwNDg1NjUxN15BMl5BanBnXkFtZTgwOTg0NzQxMTE@._V1_SY317_CR0,0,214,317_AL_.jpg"><!-- end ngIf: movie.posterUrl -->
+  <!-- ngIf: !movie.posterUrl -->
+  <p class="movie-info col-xs-8"><strong class="ng-binding">Billy Madison</strong></p>
+  <p class="movie-info col-xs-8"><a href="http://localhost:8080/#/movie/Billy Madison">More Info</a></p>
+</div><!-- end ngRepeat: movie in movies | orderBy: 'title' | filter:query as results --><div class="col-xs-12 col-sm-6 movie-display animate-repeat ng-scope" ng-repeat="movie in movies | orderBy: &#39;title&#39; | filter:query as results " style="">
+  <!-- ngIf: movie.posterUrl --><img ng-if="movie.posterUrl" class="movie-img col-xs-3 ng-scope" ng-src="http://ia.media-imdb.com/images/M/MV5BNjA4ODYxMDU3Nl5BMl5BanBnXkFtZTcwMzkzMTk3OA@@._V1_SX214_AL_.jpg" src="./localhost_files/MV5BNjA4ODYxMDU3Nl5BMl5BanBnXkFtZTcwMzkzMTk3OA@@._V1_SX214_AL_.jpg"><!-- end ngIf: movie.posterUrl -->
+  <!-- ngIf: !movie.posterUrl -->
+  <p class="movie-info col-xs-8"><strong class="ng-binding">Braveheart</strong></p>
+  <p class="movie-info col-xs-8"><a href="http://localhost:8080/#/movie/Braveheart">More Info</a></p>
+</div><!-- end ngRepeat: movie in movies | orderBy: 'title' | filter:query as results --><div class="col-xs-12 col-sm-6 movie-display animate-repeat ng-scope" ng-repeat="movie in movies | orderBy: &#39;title&#39; | filter:query as results " style="">
+  <!-- ngIf: movie.posterUrl -->
+  <!-- ngIf: !movie.posterUrl --><img ng-if="!movie.posterUrl" class="movie-img col-xs-3 ng-scope" src="./localhost_files/redirect_icon.gif"><!-- end ngIf: !movie.posterUrl -->
+  <p class="movie-info col-xs-8"><strong class="ng-binding">Captain America: Civil War</strong></p>
+  <p class="movie-info col-xs-8"><a href="http://localhost:8080/#/movie/Captain America: Civil War">More Info</a></p>
+</div><!-- end ngRepeat: movie in movies | orderBy: 'title' | filter:query as results --><div class="col-xs-12 col-sm-6 movie-display animate-repeat ng-scope" ng-repeat="movie in movies | orderBy: &#39;title&#39; | filter:query as results " style="">
+  <!-- ngIf: movie.posterUrl --><img ng-if="movie.posterUrl" class="movie-img col-xs-3 ng-scope" ng-src="http://ia.media-imdb.com/images/M/MV5BMzA2NDkwODAwM15BMl5BanBnXkFtZTgwODk5MTgzMTE@._V1_SY317_CR1,0,214,317_AL_.jpg" src="./localhost_files/MV5BMzA2NDkwODAwM15BMl5BanBnXkFtZTgwODk5MTgzMTE@._V1_SY317_CR1,0,214,317_AL_.jpg"><!-- end ngIf: movie.posterUrl -->
+  <!-- ngIf: !movie.posterUrl -->
+  <p class="movie-info col-xs-8"><strong class="ng-binding">Captain America: The Winter Soldier</strong></p>
+  <p class="movie-info col-xs-8"><a href="http://localhost:8080/#/movie/Captain America: The Winter Soldier">More Info</a></p>
+</div><!-- end ngRepeat: movie in movies | orderBy: 'title' | filter:query as results --><div class="col-xs-12 col-sm-6 movie-display animate-repeat ng-scope" ng-repeat="movie in movies | orderBy: &#39;title&#39; | filter:query as results " style="">
+  <!-- ngIf: movie.posterUrl --><img ng-if="movie.posterUrl" class="movie-img col-xs-3 ng-scope" ng-src="http://ia.media-imdb.com/images/M/MV5BMTg3MTkyMzA0NF5BMl5BanBnXkFtZTgwNTg0NDI1MDE@._V1_SX214_AL_.jpg" src="./localhost_files/MV5BMTg3MTkyMzA0NF5BMl5BanBnXkFtZTgwNTg0NDI1MDE@._V1_SX214_AL_.jpg"><!-- end ngIf: movie.posterUrl -->
+  <!-- ngIf: !movie.posterUrl -->
+  <p class="movie-info col-xs-8"><strong class="ng-binding">Clerks</strong></p>
+  <p class="movie-info col-xs-8"><a href="http://localhost:8080/#/movie/Clerks">More Info</a></p>
+</div><!-- end ngRepeat: movie in movies | orderBy: 'title' | filter:query as results --><div class="col-xs-12 col-sm-6 movie-display animate-repeat ng-scope" ng-repeat="movie in movies | orderBy: &#39;title&#39; | filter:query as results " style="">
+  <!-- ngIf: movie.posterUrl --><img ng-if="movie.posterUrl" class="movie-img col-xs-3 ng-scope" ng-src="http://ia.media-imdb.com/images/M/MV5BMTQxMjI1Nzc0M15BMl5BanBnXkFtZTcwMTc0Mzg2Mg@@._V1_SY317_CR0,0,214,317_AL_.jpg" src="./localhost_files/MV5BMTQxMjI1Nzc0M15BMl5BanBnXkFtZTcwMTc0Mzg2Mg@@._V1_SY317_CR0,0,214,317_AL_.jpg"><!-- end ngIf: movie.posterUrl -->
+  <!-- ngIf: !movie.posterUrl -->
+  <p class="movie-info col-xs-8"><strong class="ng-binding">Couples Retreat</strong></p>
+  <p class="movie-info col-xs-8"><a href="http://localhost:8080/#/movie/Couples Retreat">More Info</a></p>
+</div><!-- end ngRepeat: movie in movies | orderBy: 'title' | filter:query as results --><div class="col-xs-12 col-sm-6 movie-display animate-repeat ng-scope" ng-repeat="movie in movies | orderBy: &#39;title&#39; | filter:query as results " style="">
+  <!-- ngIf: movie.posterUrl --><img ng-if="movie.posterUrl" class="movie-img col-xs-3 ng-scope" ng-src="http://ia.media-imdb.com/images/M/MV5BMTk4MzM0MTU2MV5BMl5BanBnXkFtZTgwMTIwMzg3MjE@._V1_SY317_CR30,0,214,317_AL_.jpg" src="./localhost_files/MV5BMTk4MzM0MTU2MV5BMl5BanBnXkFtZTgwMTIwMzg3MjE@._V1_SY317_CR30,0,214,317_AL_.jpg"><!-- end ngIf: movie.posterUrl -->
+  <!-- ngIf: !movie.posterUrl -->
+  <p class="movie-info col-xs-8"><strong class="ng-binding">Family Guy</strong></p>
+  <p class="movie-info col-xs-8"><a href="http://localhost:8080/#/movie/Family Guy">More Info</a></p>
+</div><!-- end ngRepeat: movie in movies | orderBy: 'title' | filter:query as results --><div class="col-xs-12 col-sm-6 movie-display animate-repeat ng-scope" ng-repeat="movie in movies | orderBy: &#39;title&#39; | filter:query as results " style="">
+  <!-- ngIf: movie.posterUrl --><img ng-if="movie.posterUrl" class="movie-img col-xs-3 ng-scope" ng-src="http://ia.media-imdb.com/images/M/MV5BMTY1MTg1NDAxOV5BMl5BanBnXkFtZTcwMjg1MDI5Nw@@._V1_SY317_CR0,0,214,317_AL_.jpg" src="./localhost_files/MV5BMTY1MTg1NDAxOV5BMl5BanBnXkFtZTcwMjg1MDI5Nw@@._V1_SY317_CR0,0,214,317_AL_.jpg"><!-- end ngIf: movie.posterUrl -->
+  <!-- ngIf: !movie.posterUrl -->
+  <p class="movie-info col-xs-8"><strong class="ng-binding">Finding Nemo</strong></p>
+  <p class="movie-info col-xs-8"><a href="http://localhost:8080/#/movie/Finding Nemo">More Info</a></p>
+</div><!-- end ngRepeat: movie in movies | orderBy: 'title' | filter:query as results --><div class="col-xs-12 col-sm-6 movie-display animate-repeat ng-scope" ng-repeat="movie in movies | orderBy: &#39;title&#39; | filter:query as results " style="">
+  <!-- ngIf: movie.posterUrl --><img ng-if="movie.posterUrl" class="movie-img col-xs-3 ng-scope" ng-src="http://ia.media-imdb.com/images/M/MV5BMTYzODgzMjAyM15BMl5BanBnXkFtZTcwMTI3NzI2MQ@@._V1_SX214_AL_.jpg" src="./localhost_files/MV5BMTYzODgzMjAyM15BMl5BanBnXkFtZTcwMTI3NzI2MQ@@._V1_SX214_AL_.jpg"><!-- end ngIf: movie.posterUrl -->
+  <!-- ngIf: !movie.posterUrl -->
+  <p class="movie-info col-xs-8"><strong class="ng-binding">Forgetting Sarah Marshall</strong></p>
+  <p class="movie-info col-xs-8"><a href="http://localhost:8080/#/movie/Forgetting Sarah Marshall">More Info</a></p>
+</div><!-- end ngRepeat: movie in movies | orderBy: 'title' | filter:query as results --><div class="col-xs-12 col-sm-6 movie-display animate-repeat ng-scope" ng-repeat="movie in movies | orderBy: &#39;title&#39; | filter:query as results " style="">
+  <!-- ngIf: movie.posterUrl --><img ng-if="movie.posterUrl" class="movie-img col-xs-3 ng-scope" ng-src="http://ia.media-imdb.com/images/M/MV5BMTQwMTA5MzI1MF5BMl5BanBnXkFtZTcwMzY5Mzg3OA@@._V1_SX214_AL_.jpg" src="./localhost_files/MV5BMTQwMTA5MzI1MF5BMl5BanBnXkFtZTcwMzY5Mzg3OA@@._V1_SX214_AL_.jpg"><!-- end ngIf: movie.posterUrl -->
+  <!-- ngIf: !movie.posterUrl -->
+  <p class="movie-info col-xs-8"><strong class="ng-binding">Forrest Gump</strong></p>
+  <p class="movie-info col-xs-8"><a href="http://localhost:8080/#/movie/Forrest Gump">More Info</a></p>
+</div><!-- end ngRepeat: movie in movies | orderBy: 'title' | filter:query as results --><div class="col-xs-12 col-sm-6 movie-display animate-repeat ng-scope" ng-repeat="movie in movies | orderBy: &#39;title&#39; | filter:query as results " style="">
+  <!-- ngIf: movie.posterUrl --><img ng-if="movie.posterUrl" class="movie-img col-xs-3 ng-scope" ng-src="http://ia.media-imdb.com/images/M/MV5BMTUxNjQ2NjA1OV5BMl5BanBnXkFtZTcwMDAyMTYyMQ@@._V1_SX214_AL_.jpg" src="./localhost_files/MV5BMTUxNjQ2NjA1OV5BMl5BanBnXkFtZTcwMDAyMTYyMQ@@._V1_SX214_AL_.jpg"><!-- end ngIf: movie.posterUrl -->
+  <!-- ngIf: !movie.posterUrl -->
+  <p class="movie-info col-xs-8"><strong class="ng-binding">George of the Jungle</strong></p>
+  <p class="movie-info col-xs-8"><a href="http://localhost:8080/#/movie/George of the Jungle">More Info</a></p>
+</div><!-- end ngRepeat: movie in movies | orderBy: 'title' | filter:query as results --><div class="col-xs-12 col-sm-6 movie-display animate-repeat ng-scope" ng-repeat="movie in movies | orderBy: &#39;title&#39; | filter:query as results " style="">
+  <!-- ngIf: movie.posterUrl --><img ng-if="movie.posterUrl" class="movie-img col-xs-3 ng-scope" ng-src="http://ia.media-imdb.com/images/M/MV5BMTQyNTkxMjUwMV5BMl5BanBnXkFtZTcwMDQ2NTU0MQ@@._V1_SY317_CR0,0,214,317_AL_.jpg" src="./localhost_files/MV5BMTQyNTkxMjUwMV5BMl5BanBnXkFtZTcwMDQ2NTU0MQ@@._V1_SY317_CR0,0,214,317_AL_.jpg"><!-- end ngIf: movie.posterUrl -->
+  <!-- ngIf: !movie.posterUrl -->
+  <p class="movie-info col-xs-8"><strong class="ng-binding">Happy Feet</strong></p>
+  <p class="movie-info col-xs-8"><a href="http://localhost:8080/#/movie/Happy Feet">More Info</a></p>
+</div><!-- end ngRepeat: movie in movies | orderBy: 'title' | filter:query as results --><div class="col-xs-12 col-sm-6 movie-display animate-repeat ng-scope" ng-repeat="movie in movies | orderBy: &#39;title&#39; | filter:query as results " style="">
+  <!-- ngIf: movie.posterUrl --><img ng-if="movie.posterUrl" class="movie-img col-xs-3 ng-scope" ng-src="http://ia.media-imdb.com/images/M/MV5BMTgxMTI1ODYyOV5BMl5BanBnXkFtZTYwNjQyOTI3._V1_SY317_CR8,0,214,317_AL_.jpg" src="./localhost_files/MV5BMTgxMTI1ODYyOV5BMl5BanBnXkFtZTYwNjQyOTI3._V1_SY317_CR8,0,214,317_AL_.jpg"><!-- end ngIf: movie.posterUrl -->
+  <!-- ngIf: !movie.posterUrl -->
+  <p class="movie-info col-xs-8"><strong class="ng-binding">High Fidelity</strong></p>
+  <p class="movie-info col-xs-8"><a href="http://localhost:8080/#/movie/High Fidelity">More Info</a></p>
+</div><!-- end ngRepeat: movie in movies | orderBy: 'title' | filter:query as results --><div class="col-xs-12 col-sm-6 movie-display animate-repeat ng-scope" ng-repeat="movie in movies | orderBy: &#39;title&#39; | filter:query as results " style="">
+  <!-- ngIf: movie.posterUrl --><img ng-if="movie.posterUrl" class="movie-img col-xs-3 ng-scope" ng-src="http://ia.media-imdb.com/images/M/MV5BMzMwMTAwODczN15BMl5BanBnXkFtZTgwMDk2NDA4MTE@._V1_SX214_AL_.jpg" src="./localhost_files/MV5BMzMwMTAwODczN15BMl5BanBnXkFtZTgwMDk2NDA4MTE@._V1_SX214_AL_.jpg"><!-- end ngIf: movie.posterUrl -->
+  <!-- ngIf: !movie.posterUrl -->
+  <p class="movie-info col-xs-8"><strong class="ng-binding">How to Train Your Dragon 2</strong></p>
+  <p class="movie-info col-xs-8"><a href="http://localhost:8080/#/movie/How to Train Your Dragon 2">More Info</a></p>
+</div><!-- end ngRepeat: movie in movies | orderBy: 'title' | filter:query as results --><div class="col-xs-12 col-sm-6 movie-display animate-repeat ng-scope" ng-repeat="movie in movies | orderBy: &#39;title&#39; | filter:query as results " style="">
+  <!-- ngIf: movie.posterUrl --><img ng-if="movie.posterUrl" class="movie-img col-xs-3 ng-scope" ng-src="http://ia.media-imdb.com/images/M/MV5BMTMwODY3NzQzNF5BMl5BanBnXkFtZTcwNzUxNjc0MQ@@._V1_SY317_CR6,0,214,317_AL_.jpg" src="./localhost_files/MV5BMTMwODY3NzQzNF5BMl5BanBnXkFtZTcwNzUxNjc0MQ@@._V1_SY317_CR6,0,214,317_AL_.jpg"><!-- end ngIf: movie.posterUrl -->
+  <!-- ngIf: !movie.posterUrl -->
+  <p class="movie-info col-xs-8"><strong class="ng-binding">Independence Day</strong></p>
+  <p class="movie-info col-xs-8"><a href="http://localhost:8080/#/movie/Independence Day">More Info</a></p>
+</div><!-- end ngRepeat: movie in movies | orderBy: 'title' | filter:query as results --><div class="col-xs-12 col-sm-6 movie-display animate-repeat ng-scope" ng-repeat="movie in movies | orderBy: &#39;title&#39; | filter:query as results " style="">
+  <!-- ngIf: movie.posterUrl --><img ng-if="movie.posterUrl" class="movie-img col-xs-3 ng-scope" ng-src="http://ia.media-imdb.com/images/M/MV5BMTczNTI2ODUwOF5BMl5BanBnXkFtZTcwMTU0NTIzMw@@._V1_SX214_AL_.jpg" src="./localhost_files/MV5BMTczNTI2ODUwOF5BMl5BanBnXkFtZTcwMTU0NTIzMw@@._V1_SX214_AL_.jpg"><!-- end ngIf: movie.posterUrl -->
+  <!-- ngIf: !movie.posterUrl -->
+  <p class="movie-info col-xs-8"><strong class="ng-binding">Iron Man</strong></p>
+  <p class="movie-info col-xs-8"><a href="http://localhost:8080/#/movie/Iron Man">More Info</a></p>
+</div><!-- end ngRepeat: movie in movies | orderBy: 'title' | filter:query as results --><div class="col-xs-12 col-sm-6 movie-display animate-repeat ng-scope" ng-repeat="movie in movies | orderBy: &#39;title&#39; | filter:query as results " style="">
+  <!-- ngIf: movie.posterUrl --><img ng-if="movie.posterUrl" class="movie-img col-xs-3 ng-scope" ng-src="http://ia.media-imdb.com/images/M/MV5BMjM2MDgxMDg0Nl5BMl5BanBnXkFtZTgwNTM2OTM5NDE@._V1_SX214_AL_.jpg" src="./localhost_files/MV5BMjM2MDgxMDg0Nl5BMl5BanBnXkFtZTgwNTM2OTM5NDE@._V1_SX214_AL_.jpg"><!-- end ngIf: movie.posterUrl -->
+  <!-- ngIf: !movie.posterUrl -->
+  <p class="movie-info col-xs-8"><strong class="ng-binding">Jurassic Park</strong></p>
+  <p class="movie-info col-xs-8"><a href="http://localhost:8080/#/movie/Jurassic Park">More Info</a></p>
+</div><!-- end ngRepeat: movie in movies | orderBy: 'title' | filter:query as results --><div class="col-xs-12 col-sm-6 movie-display animate-repeat ng-scope" ng-repeat="movie in movies | orderBy: &#39;title&#39; | filter:query as results " style="">
+  <!-- ngIf: movie.posterUrl --><img ng-if="movie.posterUrl" class="movie-img col-xs-3 ng-scope" ng-src="http://ia.media-imdb.com/images/M/MV5BMTYxMzM4NTEzOV5BMl5BanBnXkFtZTcwNDMwNjQzMw@@._V1_SX214_AL_.jpg" src="./localhost_files/MV5BMTYxMzM4NTEzOV5BMl5BanBnXkFtZTcwNDMwNjQzMw@@._V1_SX214_AL_.jpg"><!-- end ngIf: movie.posterUrl -->
+  <!-- ngIf: !movie.posterUrl -->
+  <p class="movie-info col-xs-8"><strong class="ng-binding">Memoirs of a Geisha</strong></p>
+  <p class="movie-info col-xs-8"><a href="http://localhost:8080/#/movie/Memoirs of a Geisha">More Info</a></p>
+</div><!-- end ngRepeat: movie in movies | orderBy: 'title' | filter:query as results --><div class="col-xs-12 col-sm-6 movie-display animate-repeat ng-scope" ng-repeat="movie in movies | orderBy: &#39;title&#39; | filter:query as results " style="">
+  <!-- ngIf: movie.posterUrl --><img ng-if="movie.posterUrl" class="movie-img col-xs-3 ng-scope" ng-src="http://ia.media-imdb.com/images/M/MV5BMTQ1NDI2MzU2MF5BMl5BanBnXkFtZTgwNTExNTU5NDE@._V1_SX214_AL_.jpg" src="./localhost_files/MV5BMTQ1NDI2MzU2MF5BMl5BanBnXkFtZTgwNTExNTU5NDE@._V1_SX214_AL_.jpg"><!-- end ngIf: movie.posterUrl -->
+  <!-- ngIf: !movie.posterUrl -->
+  <p class="movie-info col-xs-8"><strong class="ng-binding">Mission: Impossible - Rogue Nation</strong></p>
+  <p class="movie-info col-xs-8"><a href="http://localhost:8080/#/movie/Mission: Impossible - Rogue Nation">More Info</a></p>
+</div><!-- end ngRepeat: movie in movies | orderBy: 'title' | filter:query as results --><div class="col-xs-12 col-sm-6 movie-display animate-repeat ng-scope" ng-repeat="movie in movies | orderBy: &#39;title&#39; | filter:query as results " style="">
+  <!-- ngIf: movie.posterUrl --><img ng-if="movie.posterUrl" class="movie-img col-xs-3 ng-scope" ng-src="http://ia.media-imdb.com/images/M/MV5BMTIwNjY4NDU2NF5BMl5BanBnXkFtZTcwMzM0OTUyMQ@@._V1_SY317_CR4,0,214,317_AL_.jpg" src="./localhost_files/MV5BMTIwNjY4NDU2NF5BMl5BanBnXkFtZTcwMzM0OTUyMQ@@._V1_SY317_CR4,0,214,317_AL_.jpg"><!-- end ngIf: movie.posterUrl -->
+  <!-- ngIf: !movie.posterUrl -->
+  <p class="movie-info col-xs-8"><strong class="ng-binding">Mulan</strong></p>
+  <p class="movie-info col-xs-8"><a href="http://localhost:8080/#/movie/Mulan">More Info</a></p>
+</div><!-- end ngRepeat: movie in movies | orderBy: 'title' | filter:query as results --><div class="col-xs-12 col-sm-6 movie-display animate-repeat ng-scope" ng-repeat="movie in movies | orderBy: &#39;title&#39; | filter:query as results " style="">
+  <!-- ngIf: movie.posterUrl --><img ng-if="movie.posterUrl" class="movie-img col-xs-3 ng-scope" ng-src="http://ia.media-imdb.com/images/M/MV5BNDI0ODY4NDQ1NV5BMl5BanBnXkFtZTcwMjcxNDIyMQ@@._V1_SY317_CR4,0,214,317_AL_.jpg" src="./localhost_files/MV5BNDI0ODY4NDQ1NV5BMl5BanBnXkFtZTcwMjcxNDIyMQ@@._V1_SY317_CR4,0,214,317_AL_.jpg"><!-- end ngIf: movie.posterUrl -->
+  <!-- ngIf: !movie.posterUrl -->
+  <p class="movie-info col-xs-8"><strong class="ng-binding">My Best Friend's Wedding</strong></p>
+  <p class="movie-info col-xs-8"><a href="http://localhost:8080/#/movie/My Best Friend's Wedding">More Info</a></p>
+</div><!-- end ngRepeat: movie in movies | orderBy: 'title' | filter:query as results --><div class="col-xs-12 col-sm-6 movie-display animate-repeat ng-scope" ng-repeat="movie in movies | orderBy: &#39;title&#39; | filter:query as results " style="">
+  <!-- ngIf: movie.posterUrl --><img ng-if="movie.posterUrl" class="movie-img col-xs-3 ng-scope" ng-src="http://ia.media-imdb.com/images/M/MV5BMTQ3MDc0MDc1NF5BMl5BanBnXkFtZTYwODI1ODY2._V1_SY317_CR0,0,214,317_AL_.jpg" src="./localhost_files/MV5BMTQ3MDc0MDc1NF5BMl5BanBnXkFtZTYwODI1ODY2._V1_SY317_CR0,0,214,317_AL_.jpg"><!-- end ngIf: movie.posterUrl -->
+  <!-- ngIf: !movie.posterUrl -->
+  <p class="movie-info col-xs-8"><strong class="ng-binding">Pearl Harbor</strong></p>
+  <p class="movie-info col-xs-8"><a href="http://localhost:8080/#/movie/Pearl Harbor">More Info</a></p>
+</div><!-- end ngRepeat: movie in movies | orderBy: 'title' | filter:query as results --><div class="col-xs-12 col-sm-6 movie-display animate-repeat ng-scope" ng-repeat="movie in movies | orderBy: &#39;title&#39; | filter:query as results " style="">
+  <!-- ngIf: movie.posterUrl --><img ng-if="movie.posterUrl" class="movie-img col-xs-3 ng-scope" ng-src="http://ia.media-imdb.com/images/M/MV5BMTY3NzIyNTA2NV5BMl5BanBnXkFtZTcwNzE2NjI4Nw@@._V1_SX214_AL_.jpg" src="./localhost_files/MV5BMTY3NzIyNTA2NV5BMl5BanBnXkFtZTcwNzE2NjI4Nw@@._V1_SX214_AL_.jpg"><!-- end ngIf: movie.posterUrl -->
+  <!-- ngIf: !movie.posterUrl -->
+  <p class="movie-info col-xs-8"><strong class="ng-binding">Prometheus</strong></p>
+  <p class="movie-info col-xs-8"><a href="http://localhost:8080/#/movie/Prometheus">More Info</a></p>
+</div><!-- end ngRepeat: movie in movies | orderBy: 'title' | filter:query as results --><div class="col-xs-12 col-sm-6 movie-display animate-repeat ng-scope" ng-repeat="movie in movies | orderBy: &#39;title&#39; | filter:query as results " style="">
+  <!-- ngIf: movie.posterUrl --><img ng-if="movie.posterUrl" class="movie-img col-xs-3 ng-scope" ng-src="http://ia.media-imdb.com/images/M/MV5BMTExNTA2MDQ2MTdeQTJeQWpwZ15BbWU4MDU0MzAyODMx._V1_SY317_CR104,0,214,317_AL_.jpg" src="./localhost_files/MV5BMTExNTA2MDQ2MTdeQTJeQWpwZ15BbWU4MDU0MzAyODMx._V1_SY317_CR104,0,214,317_AL_.jpg"><!-- end ngIf: movie.posterUrl -->
+  <!-- ngIf: !movie.posterUrl -->
+  <p class="movie-info col-xs-8"><strong class="ng-binding">Saturday Night Live</strong></p>
+  <p class="movie-info col-xs-8"><a href="http://localhost:8080/#/movie/Saturday Night Live">More Info</a></p>
+</div><!-- end ngRepeat: movie in movies | orderBy: 'title' | filter:query as results --><div class="col-xs-12 col-sm-6 movie-display animate-repeat ng-scope" ng-repeat="movie in movies | orderBy: &#39;title&#39; | filter:query as results " style="">
+  <!-- ngIf: movie.posterUrl --><img ng-if="movie.posterUrl" class="movie-img col-xs-3 ng-scope" ng-src="http://ia.media-imdb.com/images/M/MV5BMTg0NjEwNjUxM15BMl5BanBnXkFtZTcwMzk0MjQ5Mg@@._V1_SX214_AL_.jpg" src="./localhost_files/MV5BMTg0NjEwNjUxM15BMl5BanBnXkFtZTcwMzk0MjQ5Mg@@._V1_SX214_AL_.jpg"><!-- end ngIf: movie.posterUrl -->
+  <!-- ngIf: !movie.posterUrl -->
+  <p class="movie-info col-xs-8"><strong class="ng-binding">Sherlock Holmes</strong></p>
+  <p class="movie-info col-xs-8"><a href="http://localhost:8080/#/movie/Sherlock Holmes">More Info</a></p>
+</div><!-- end ngRepeat: movie in movies | orderBy: 'title' | filter:query as results --><div class="col-xs-12 col-sm-6 movie-display animate-repeat ng-scope" ng-repeat="movie in movies | orderBy: &#39;title&#39; | filter:query as results " style="">
+  <!-- ngIf: movie.posterUrl --><img ng-if="movie.posterUrl" class="movie-img col-xs-3 ng-scope" ng-src="http://ia.media-imdb.com/images/M/MV5BMjA0ODMzOTk4NF5BMl5BanBnXkFtZTcwNDAzNTI0MQ@@._V1_SX214_AL_.jpg" src="./localhost_files/MV5BMjA0ODMzOTk4NF5BMl5BanBnXkFtZTcwNDAzNTI0MQ@@._V1_SX214_AL_.jpg"><!-- end ngIf: movie.posterUrl -->
+  <!-- ngIf: !movie.posterUrl -->
+  <p class="movie-info col-xs-8"><strong class="ng-binding">SNL on LKL!</strong></p>
+  <p class="movie-info col-xs-8"><a href="http://localhost:8080/#/movie/SNL on LKL!">More Info</a></p>
+</div><!-- end ngRepeat: movie in movies | orderBy: 'title' | filter:query as results --><div class="col-xs-12 col-sm-6 movie-display animate-repeat ng-scope" ng-repeat="movie in movies | orderBy: &#39;title&#39; | filter:query as results " style="">
+  <!-- ngIf: movie.posterUrl --><img ng-if="movie.posterUrl" class="movie-img col-xs-3 ng-scope" ng-src="http://ia.media-imdb.com/images/M/MV5BMTcwNzUzMjU1OV5BMl5BanBnXkFtZTcwMTM0NDQ2MQ@@._V1_SX214_AL_.jpg" src="./localhost_files/MV5BMTcwNzUzMjU1OV5BMl5BanBnXkFtZTcwMTM0NDQ2MQ@@._V1_SX214_AL_.jpg"><!-- end ngIf: movie.posterUrl -->
+  <!-- ngIf: !movie.posterUrl -->
+  <p class="movie-info col-xs-8"><strong class="ng-binding">Step Brothers</strong></p>
+  <p class="movie-info col-xs-8"><a href="http://localhost:8080/#/movie/Step Brothers">More Info</a></p>
+</div><!-- end ngRepeat: movie in movies | orderBy: 'title' | filter:query as results --><div class="col-xs-12 col-sm-6 movie-display animate-repeat ng-scope" ng-repeat="movie in movies | orderBy: &#39;title&#39; | filter:query as results " style="">
+  <!-- ngIf: movie.posterUrl --><img ng-if="movie.posterUrl" class="movie-img col-xs-3 ng-scope" ng-src="http://ia.media-imdb.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_SY317_CR0,0,214,317_AL_.jpg" src="./localhost_files/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_SY317_CR0,0,214,317_AL_.jpg"><!-- end ngIf: movie.posterUrl -->
+  <!-- ngIf: !movie.posterUrl -->
+  <p class="movie-info col-xs-8"><strong class="ng-binding">The Dark Knight</strong></p>
+  <p class="movie-info col-xs-8"><a href="http://localhost:8080/#/movie/The Dark Knight">More Info</a></p>
+</div><!-- end ngRepeat: movie in movies | orderBy: 'title' | filter:query as results --><div class="col-xs-12 col-sm-6 movie-display animate-repeat ng-scope" ng-repeat="movie in movies | orderBy: &#39;title&#39; | filter:query as results " style="">
+  <!-- ngIf: movie.posterUrl --><img ng-if="movie.posterUrl" class="movie-img col-xs-3 ng-scope" ng-src="http://ia.media-imdb.com/images/M/MV5BMTU1MDA1MTYwMF5BMl5BanBnXkFtZTcwMDcxMzA1Mg@@._V1_SX214_AL_.jpg" src="./localhost_files/MV5BMTU1MDA1MTYwMF5BMl5BanBnXkFtZTcwMDcxMzA1Mg@@._V1_SX214_AL_.jpg"><!-- end ngIf: movie.posterUrl -->
+  <!-- ngIf: !movie.posterUrl -->
+  <p class="movie-info col-xs-8"><strong class="ng-binding">The Hangover</strong></p>
+  <p class="movie-info col-xs-8"><a href="http://localhost:8080/#/movie/The Hangover">More Info</a></p>
+</div><!-- end ngRepeat: movie in movies | orderBy: 'title' | filter:query as results --><div class="col-xs-12 col-sm-6 movie-display animate-repeat ng-scope" ng-repeat="movie in movies | orderBy: &#39;title&#39; | filter:query as results " style="">
+  <!-- ngIf: movie.posterUrl --><img ng-if="movie.posterUrl" class="movie-img col-xs-3 ng-scope" ng-src="http://ia.media-imdb.com/images/M/MV5BMTcxMzU2MDc5Ml5BMl5BanBnXkFtZTcwMjUxNDcyMg@@._V1_SX214_AL_.jpg" src="./localhost_files/MV5BMTcxMzU2MDc5Ml5BMl5BanBnXkFtZTcwMjUxNDcyMg@@._V1_SX214_AL_.jpg"><!-- end ngIf: movie.posterUrl -->
+  <!-- ngIf: !movie.posterUrl -->
+  <p class="movie-info col-xs-8"><strong class="ng-binding">The Lord of the Rings</strong></p>
+  <p class="movie-info col-xs-8"><a href="http://localhost:8080/#/movie/The Lord of the Rings">More Info</a></p>
+</div><!-- end ngRepeat: movie in movies | orderBy: 'title' | filter:query as results --><div class="col-xs-12 col-sm-6 movie-display animate-repeat ng-scope" ng-repeat="movie in movies | orderBy: &#39;title&#39; | filter:query as results " style="">
+  <!-- ngIf: movie.posterUrl --><img ng-if="movie.posterUrl" class="movie-img col-xs-3 ng-scope" ng-src="http://ia.media-imdb.com/images/M/MV5BNTEyMjAwMDU1OV5BMl5BanBnXkFtZTcwNDQyNTkxMw@@._V1_SY317_CR1,0,214,317_AL_.jpg" src="./localhost_files/MV5BNTEyMjAwMDU1OV5BMl5BanBnXkFtZTcwNDQyNTkxMw@@._V1_SY317_CR1,0,214,317_AL_.jpg"><!-- end ngIf: movie.posterUrl -->
+  <!-- ngIf: !movie.posterUrl -->
+  <p class="movie-info col-xs-8"><strong class="ng-binding">The Lord of the Rings: The Fellowship of the Ring</strong></p>
+  <p class="movie-info col-xs-8"><a href="http://localhost:8080/#/movie/The Lord of the Rings: The Fellowship of the Ring">More Info</a></p>
+</div><!-- end ngRepeat: movie in movies | orderBy: 'title' | filter:query as results --><div class="col-xs-12 col-sm-6 movie-display animate-repeat ng-scope" ng-repeat="movie in movies | orderBy: &#39;title&#39; | filter:query as results " style="">
+  <!-- ngIf: movie.posterUrl --><img ng-if="movie.posterUrl" class="movie-img col-xs-3 ng-scope" ng-src="http://ia.media-imdb.com/images/M/MV5BMjE4MjA1NTAyMV5BMl5BanBnXkFtZTcwNzM1NDQyMQ@@._V1_SX214_AL_.jpg" src="./localhost_files/MV5BMjE4MjA1NTAyMV5BMl5BanBnXkFtZTcwNzM1NDQyMQ@@._V1_SX214_AL_.jpg"><!-- end ngIf: movie.posterUrl -->
+  <!-- ngIf: !movie.posterUrl -->
+  <p class="movie-info col-xs-8"><strong class="ng-binding">The Lord of the Rings: The Return of the King</strong></p>
+  <p class="movie-info col-xs-8"><a href="http://localhost:8080/#/movie/The Lord of the Rings: The Return of the King">More Info</a></p>
+</div><!-- end ngRepeat: movie in movies | orderBy: 'title' | filter:query as results --><div class="col-xs-12 col-sm-6 movie-display animate-repeat ng-scope" ng-repeat="movie in movies | orderBy: &#39;title&#39; | filter:query as results " style="">
+  <!-- ngIf: movie.posterUrl --><img ng-if="movie.posterUrl" class="movie-img col-xs-3 ng-scope" ng-src="http://ia.media-imdb.com/images/M/MV5BMTAyNDU0NjY4NTheQTJeQWpwZ15BbWU2MDk4MTY2Nw@@._V1_SY317_CR1,0,214,317_AL_.jpg" src="./localhost_files/MV5BMTAyNDU0NjY4NTheQTJeQWpwZ15BbWU2MDk4MTY2Nw@@._V1_SY317_CR1,0,214,317_AL_.jpg"><!-- end ngIf: movie.posterUrl -->
+  <!-- ngIf: !movie.posterUrl -->
+  <p class="movie-info col-xs-8"><strong class="ng-binding">The Lord of the Rings: The Two Towers</strong></p>
+  <p class="movie-info col-xs-8"><a href="http://localhost:8080/#/movie/The Lord of the Rings: The Two Towers">More Info</a></p>
+</div><!-- end ngRepeat: movie in movies | orderBy: 'title' | filter:query as results --><div class="col-xs-12 col-sm-6 movie-display animate-repeat ng-scope" ng-repeat="movie in movies | orderBy: &#39;title&#39; | filter:query as results " style="">
+  <!-- ngIf: movie.posterUrl --><img ng-if="movie.posterUrl" class="movie-img col-xs-3 ng-scope" ng-src="http://ia.media-imdb.com/images/M/MV5BMTcxNzUxNjExNV5BMl5BanBnXkFtZTcwNTcwMjgxMQ@@._V1_SY317_CR2,0,214,317_AL_.jpg" src="./localhost_files/MV5BMTcxNzUxNjExNV5BMl5BanBnXkFtZTcwNTcwMjgxMQ@@._V1_SY317_CR2,0,214,317_AL_.jpg"><!-- end ngIf: movie.posterUrl -->
+  <!-- ngIf: !movie.posterUrl -->
+  <p class="movie-info col-xs-8"><strong class="ng-binding">The Return of the King</strong></p>
+  <p class="movie-info col-xs-8"><a href="http://localhost:8080/#/movie/The Return of the King">More Info</a></p>
+</div><!-- end ngRepeat: movie in movies | orderBy: 'title' | filter:query as results --><div class="col-xs-12 col-sm-6 movie-display animate-repeat ng-scope" ng-repeat="movie in movies | orderBy: &#39;title&#39; | filter:query as results " style="">
+  <!-- ngIf: movie.posterUrl --><img ng-if="movie.posterUrl" class="movie-img col-xs-3 ng-scope" ng-src="http://ia.media-imdb.com/images/M/MV5BMTgyODA5MzQ1MF5BMl5BanBnXkFtZTgwMzYxNzYxMTE@._V1_SX214_AL_.jpg" src="./localhost_files/MV5BMTgyODA5MzQ1MF5BMl5BanBnXkFtZTgwMzYxNzYxMTE@._V1_SX214_AL_.jpg"><!-- end ngIf: movie.posterUrl -->
+  <!-- ngIf: !movie.posterUrl -->
+  <p class="movie-info col-xs-8"><strong class="ng-binding">The Sandlot</strong></p>
+  <p class="movie-info col-xs-8"><a href="http://localhost:8080/#/movie/The Sandlot">More Info</a></p>
+</div><!-- end ngRepeat: movie in movies | orderBy: 'title' | filter:query as results --><div class="col-xs-12 col-sm-6 movie-display animate-repeat ng-scope" ng-repeat="movie in movies | orderBy: &#39;title&#39; | filter:query as results " style="">
+  <!-- ngIf: movie.posterUrl --><img ng-if="movie.posterUrl" class="movie-img col-xs-3 ng-scope" ng-src="http://ia.media-imdb.com/images/M/MV5BMTk0MTAzMzgxOV5BMl5BanBnXkFtZTgwOTM3Mjg4MzE@._V1_SY317_CR12,0,214,317_AL_.jpg" src="./localhost_files/MV5BMTk0MTAzMzgxOV5BMl5BanBnXkFtZTgwOTM3Mjg4MzE@._V1_SY317_CR12,0,214,317_AL_.jpg"><!-- end ngIf: movie.posterUrl -->
+  <!-- ngIf: !movie.posterUrl -->
+  <p class="movie-info col-xs-8"><strong class="ng-binding">The Simpsons</strong></p>
+  <p class="movie-info col-xs-8"><a href="http://localhost:8080/#/movie/The Simpsons">More Info</a></p>
+</div><!-- end ngRepeat: movie in movies | orderBy: 'title' | filter:query as results --><div class="col-xs-12 col-sm-6 movie-display animate-repeat ng-scope" ng-repeat="movie in movies | orderBy: &#39;title&#39; | filter:query as results " style="">
+  <!-- ngIf: movie.posterUrl --><img ng-if="movie.posterUrl" class="movie-img col-xs-3 ng-scope" ng-src="http://ia.media-imdb.com/images/M/MV5BNDg3NzY3NzUzMF5BMl5BanBnXkFtZTcwMzIxODYyMQ@@._V1_SX214_AL_.jpg" src="./localhost_files/MV5BNDg3NzY3NzUzMF5BMl5BanBnXkFtZTcwMzIxODYyMQ@@._V1_SX214_AL_.jpg"><!-- end ngIf: movie.posterUrl -->
+  <!-- ngIf: !movie.posterUrl -->
+  <p class="movie-info col-xs-8"><strong class="ng-binding">The Wedding Singer</strong></p>
+  <p class="movie-info col-xs-8"><a href="http://localhost:8080/#/movie/The Wedding Singer">More Info</a></p>
+</div><!-- end ngRepeat: movie in movies | orderBy: 'title' | filter:query as results --><div class="col-xs-12 col-sm-6 movie-display animate-repeat ng-scope" ng-repeat="movie in movies | orderBy: &#39;title&#39; | filter:query as results " style="">
+  <!-- ngIf: movie.posterUrl --><img ng-if="movie.posterUrl" class="movie-img col-xs-3 ng-scope" ng-src="http://ia.media-imdb.com/images/M/MV5BMTYxMjA5NDMzNV5BMl5BanBnXkFtZTcwOTk2Mjk3NA@@._V1_SX214_AL_.jpg" src="./localhost_files/MV5BMTYxMjA5NDMzNV5BMl5BanBnXkFtZTcwOTk2Mjk3NA@@._V1_SX214_AL_.jpg"><!-- end ngIf: movie.posterUrl -->
+  <!-- ngIf: !movie.posterUrl -->
+  <p class="movie-info col-xs-8"><strong class="ng-binding">Thor</strong></p>
+  <p class="movie-info col-xs-8"><a href="http://localhost:8080/#/movie/Thor">More Info</a></p>
+</div><!-- end ngRepeat: movie in movies | orderBy: 'title' | filter:query as results --><div class="col-xs-12 col-sm-6 movie-display animate-repeat ng-scope" ng-repeat="movie in movies | orderBy: &#39;title&#39; | filter:query as results " style="">
+  <!-- ngIf: movie.posterUrl --><img ng-if="movie.posterUrl" class="movie-img col-xs-3 ng-scope" ng-src="http://ia.media-imdb.com/images/M/MV5BMjExNzM0NDM0N15BMl5BanBnXkFtZTcwMzkxOTUwNw@@._V1_SY317_CR0,0,214,317_AL_.jpg" src="./localhost_files/MV5BMjExNzM0NDM0N15BMl5BanBnXkFtZTcwMzkxOTUwNw@@._V1_SY317_CR0,0,214,317_AL_.jpg"><!-- end ngIf: movie.posterUrl -->
+  <!-- ngIf: !movie.posterUrl -->
+  <p class="movie-info col-xs-8"><strong class="ng-binding">Titanic</strong></p>
+  <p class="movie-info col-xs-8"><a href="http://localhost:8080/#/movie/Titanic">More Info</a></p>
+</div><!-- end ngRepeat: movie in movies | orderBy: 'title' | filter:query as results --><div class="col-xs-12 col-sm-6 movie-display animate-repeat ng-scope" ng-repeat="movie in movies | orderBy: &#39;title&#39; | filter:query as results " style="">
+  <!-- ngIf: movie.posterUrl --><img ng-if="movie.posterUrl" class="movie-img col-xs-3 ng-scope" ng-src="http://ia.media-imdb.com/images/M/MV5BMTkxNzg1OTU4M15BMl5BanBnXkFtZTcwMjcyMjI5MQ@@._V1_SX214_AL_.jpg" src="./localhost_files/MV5BMTkxNzg1OTU4M15BMl5BanBnXkFtZTcwMjcyMjI5MQ@@._V1_SX214_AL_.jpg"><!-- end ngIf: movie.posterUrl -->
+  <!-- ngIf: !movie.posterUrl -->
+  <p class="movie-info col-xs-8"><strong class="ng-binding">Transporter 3</strong></p>
+  <p class="movie-info col-xs-8"><a href="http://localhost:8080/#/movie/Transporter 3">More Info</a></p>
+</div><!-- end ngRepeat: movie in movies | orderBy: 'title' | filter:query as results --><div class="col-xs-12 col-sm-6 movie-display animate-repeat ng-scope" ng-repeat="movie in movies | orderBy: &#39;title&#39; | filter:query as results " style="">
+  <!-- ngIf: movie.posterUrl --><img ng-if="movie.posterUrl" class="movie-img col-xs-3 ng-scope" ng-src="http://ia.media-imdb.com/images/M/MV5BMTA2Nzk3MTgzMTVeQTJeQWpwZ15BbWU3MDgyNTgxNjk@._V1_SY317_CR12,0,214,317_AL_.jpg" src="./localhost_files/MV5BMTA2Nzk3MTgzMTVeQTJeQWpwZ15BbWU3MDgyNTgxNjk@._V1_SY317_CR12,0,214,317_AL_.jpg"><!-- end ngIf: movie.posterUrl -->
+  <!-- ngIf: !movie.posterUrl -->
+  <p class="movie-info col-xs-8"><strong class="ng-binding">Waterworld</strong></p>
+  <p class="movie-info col-xs-8"><a href="http://localhost:8080/#/movie/Waterworld">More Info</a></p>
+</div><!-- end ngRepeat: movie in movies | orderBy: 'title' | filter:query as results --><div class="col-xs-12 col-sm-6 movie-display animate-repeat ng-scope" ng-repeat="movie in movies | orderBy: &#39;title&#39; | filter:query as results " style="">
+  <!-- ngIf: movie.posterUrl --><img ng-if="movie.posterUrl" class="movie-img col-xs-3 ng-scope" ng-src="http://ia.media-imdb.com/images/M/MV5BMTU5NjU4NDUzMl5BMl5BanBnXkFtZTgwMjc4NDgzMTE@._V1_SY317_CR0,0,214,317_AL_.jpg" src="./localhost_files/MV5BMTU5NjU4NDUzMl5BMl5BanBnXkFtZTgwMjc4NDgzMTE@._V1_SY317_CR0,0,214,317_AL_.jpg"><!-- end ngIf: movie.posterUrl -->
+  <!-- ngIf: !movie.posterUrl -->
+  <p class="movie-info col-xs-8"><strong class="ng-binding">While You Were Sleeping</strong></p>
+  <p class="movie-info col-xs-8"><a href="http://localhost:8080/#/movie/While You Were Sleeping">More Info</a></p>
+</div><!-- end ngRepeat: movie in movies | orderBy: 'title' | filter:query as results -->
+<!-- ngIf: results.length == 0 --></div>
+  
+  <script src="./localhost_files/cb=gapi.loaded_0" async=""></script><script src="./localhost_files/angular.min.js"></script>
+  <script src="./localhost_files/angular-animate.min.js"></script>
+  <script src="./localhost_files/angular-ui-router.min.js"></script>
+  <script src="./localhost_files/clientKey.js"></script>
+  <script src="./localhost_files/key.js"></script>
+  <script src="./localhost_files/client.js" gapi_processed="true"></script>
+  <script src="./localhost_files/services.js"></script>
+  <script src="./localhost_files/movie.js"></script>
+  <script src="./localhost_files/addMovie.js"></script>
+  <script src="./localhost_files/allMovies.js"></script>
+  <script src="./localhost_files/app.js"></script>
+
+<iframe name="oauth2relay642940613" id="oauth2relay642940613" src="./localhost_files/postmessageRelay.html" tabindex="-1" style="width: 1px; height: 1px; position: absolute; top: -100px;"></iframe></body></html>

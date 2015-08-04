@@ -1,11 +1,14 @@
 <input class="form-control" type="text" ng-model="query.location" placeholder="Enter a location">
 <input class="form-control" type="text" ng-model="query.title" placeholder="Enter movie title">
-<div class="movie-display animate-repeat" ng-repeat="movie in movies | orderBy: 'title' | filter:query as results ">
-  <img ng-if="movie.posterUrl" class="movie-img col-xs-3" ng-src="{{movie.posterUrl}}">
-  <img ng-if="!movie.posterUrl" class="movie-img col-xs-3" src="../assets/redirect_icon.gif">
-  <p class="movie-info col-xs-8">{{movie.title}}</p>
-  <p class="movie-info col-xs-8"><a href="http://localhost:8080/#/movie/{{movie.title}}">More Info</a>
-</div>
-<div class="animate-repeat" ng-if="results.length == 0">
-  <strong>No Results Found....</strong>
+<div class="show-movies">
+  <div class="col-xs-12 col-sm-6 movie-display animate-repeat" ng-repeat="movie in movies | orderBy: 'title' | filter:query as results ">
+    <a href="http://localhost:8080/#/movie/{{movie.title}}"><img ng-if="movie.posterUrl" class="movie-img col-xs-3" ng-src="{{movie.posterUrl}}">
+    <img ng-if="!movie.posterUrl" class="movie-img col-xs-3" src="../assets/redirect_icon.gif">
+    <p class="movie-info col-xs-8"><strong>{{movie.title}}</strong></p>
+    </a>
+    <div class="inner-padding"></div>
+  </div>
+  <div class="animate-repeat" ng-if="results.length == 0">
+    <strong>No Results Found....</strong>
+  </div>
 </div>

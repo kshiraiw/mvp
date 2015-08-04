@@ -1,9 +1,13 @@
 var Movie = require('../db/config');
 var request = require('request');
+var key = require('../key');
+var YouTube = require('youtube-node');
+var youTube = new YouTube();
+youTube.setKey(key);
 
 module.exports.handleAdd = function(req, res) {
-  var val = req.body.title.toUpperCase();
-  Movie.findOne({where: {title: val}}).then(function(movie) {
+  var val = req.body.title;
+  Movie.findOne({title: { $regex : new RegExp( val, "i") }}).exec(function(err,movie) {
     if (movie) {
       return res.status(200).send(movie);
     } else {
@@ -13,14 +17,14 @@ module.exports.handleAdd = function(req, res) {
         body = JSON.parse(body);
 
         if (!body[0]) {res.send(null);}
-        Movie.create({
-          title: body[0].title.toUpperCase(),
+        new Movie({
+          title: body[0].title,
           location: body[0].filmingLocations.join(' '),
           plot: body[0].simplePlot,
           rating: body[0].rated,
           IMDBurl: body[0].urlIMDB,
           posterUrl: body[0].urlPoster
-        }).then(function(movie) {
+        }).save(function(err, movie) {
           res.status(200).send(movie);
         });
       });
@@ -30,7 +34,7 @@ module.exports.handleAdd = function(req, res) {
 
 module.exports.handleGetOne = function(req, res) {
   var title = req.body.title;
-  Movie.findOne({where: {title: title}}).then(function(movie) {
+  Movie.findOne( {title: { $regex : new RegExp( title, "i") }} ).exec(function(err, movie) {
     if (movie) {
       return res.status(200).send(movie);
     } else {
@@ -40,8 +44,15 @@ module.exports.handleGetOne = function(req, res) {
 };
 
 module.exports.handleGetAll = function(req, res) {
-  Movie.findAll().then(function(movies) {
-    console.log(movies);
+  Movie.find({}).exec(function(err, movies) {
     res.status(200).send(movies);
+  });
+};
+
+module.exports.searchTrailer = function(req, res) {
+  youTube.search(req.body.title + " trailer", 1, function(err, results) {
+    if (err) {console.log(err);}
+    console.log("RESULTS FROM YOUTUBE", results)
+    res.send(results);
   });
 };

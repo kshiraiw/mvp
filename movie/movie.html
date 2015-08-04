@@ -1,21 +1,27 @@
 
   <div ng-show="movieError">No Match found</div>
   <div class ="container" ng-if="isLoaded">
-    <div ng-class="movie.location ? 'col-sm-6' : 'col-sm-12'">
+    <div ng-class="movie.posterUrl ? 'col-sm-6' : 'col-sm-12'">
       <h1>{{movie.title}}</h1>
       <p ng-show="movie.location">Filming Location: {{movie.location}}</p>
       <p ng-show="movie.plot">Plot: {{movie.plot}}</p>
       <p ng-show="movie.rating">Rated: {{movie.rating}}</p>
       <a href="{{movie.IMDBurl}}">More info on IMDB</a>
-
+    </div>
+    <div ng-if="movie.posterUrl" class="col-sm-6">
       <center><img ng-src="{{movie.posterUrl}}"></center>
     </div>
-    <div class="col-sm-6">
-      <center>
-        <iframe ng-show="movie.location" width="600" height="450"
-          frameborder="0" style="border:0"
-          ng-src="{{url}}"
-        ></iframe>
-      </center>
+    <div>
+      <div ng-class="trailer ? 'col-sm-6' : 'col-sm-12'">
+        <center>
+          <iframe ng-show="movie.location" width="500" height="400"
+            frameborder="0" style="border:0"
+            ng-src="{{url}}"
+          ></iframe>
+        </center>
+      </div>
+      <div ng-class="movie.location ? 'col-sm-6' : 'col-sm-12'">
+        <center><iframe title="YouTube" width="500" height="400" ng-src="{{trailerUrl}}" frameborder="0" allowfullscreen></iframe></center>
+      </div>
     </div>
   </div>

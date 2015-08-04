@@ -16,6 +16,7 @@
     "mongoose": "^4.1.0",
     "mysql": "^2.8.0",
     "request": "^2.60.0",
-    "sequelize": "^3.5.1"
+    "sequelize": "^3.5.1",
+    "youtube-node": "^1.2.0"
   }
 }
