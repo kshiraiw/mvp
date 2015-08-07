@@ -19,7 +19,7 @@ Once the project moves into development, the press release can be used as a touc
 ## Heading ##
   > Name the product in a way the reader (i.e. your target customers) will understand.
 
-  The product will find and show the filming location for movies. Later features will be able to sort movies by filming location.
+  Movie Database
 
 ## Sub-Heading ##
   > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
@@ -28,7 +28,7 @@ Once the project moves into development, the press release can be used as a touc
 ## Summary ##
   > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
 
-  Did you ever want to know where your favorite movie was filmed? Want to know random facts about your city? This product shows filming locations and you can sort it by movie!
+  Did you ever want to watch all your favorite trailers as well as see original movie posters? This is your place.  
 
 ## Problem ##
   > Describe the problem your product solves.

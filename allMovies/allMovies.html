@@ -1,5 +1,14 @@
-<input class="form-control" type="text" ng-model="query.location" placeholder="Enter a location">
-<input class="form-control" type="text" ng-model="query.title" placeholder="Enter movie title">
+<div class="nav navbar-default">
+  <form name="movieForm" ng-submit="sendMovie()">
+    <div class="col-sm-8">
+      <input class="form-control" ng-model="query.title" id="movie" type="text" placeholder="Enter a movie" required>
+    </div>
+    <div class="col-sm-4">
+      <input class="form-control btn btn-primary" type="submit" ng-disabled="isSaving || movieForm.$invalid">
+    </div>
+  </form>
+</div>
+
 <div class="show-movies">
   <div class="col-xs-12 col-sm-6 movie-display animate-repeat" ng-repeat="movie in movies | orderBy: 'title' | filter:query as results ">
     <a href="http://localhost:8080/#/movie/{{movie.title}}"><img ng-if="movie.posterUrl" class="movie-img col-xs-3" ng-src="{{movie.posterUrl}}">
@@ -8,7 +17,10 @@
     </a>
     <div class="inner-padding"></div>
   </div>
-  <div class="animate-repeat" ng-if="results.length == 0">
-    <strong>No Results Found....</strong>
+  <div class="animate-repeat" ng-if="results.length == 0 && !isSaving">
+    <strong>No Results Found....Submit to Add Movie</strong>
+  </div>
+  <div ng-show="isSaving">
+    <center><img src="assets/spiffygif_46x46.gif"></center>
   </div>
 </div>

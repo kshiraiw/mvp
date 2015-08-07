@@ -14,7 +14,6 @@ app.controller('movieCtrl', function($scope, $sce, $stateParams, Movies) {
       }
   }).then(function () {
     Movies.searchTrailer($scope.movie.title).then(function(trailers) {
-      console.log(trailers.data.items[0].id.videoId);
       if (!trailers.data) {return;}
       $scope.trailer = trailers.data.items[0].id.videoId;
       $scope.trailerUrl = "http://youtube.com/embed/" + $scope.trailer;

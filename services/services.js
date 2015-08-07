@@ -2,6 +2,7 @@ var app = angular.module('app.services', []);
 
 app.factory('Movies', function($http) {
   var addMovie = function(movie) {
+    console.log("adding movie", movie)
     return $http({
       method: 'POST',
       url: 'http://localhost:8080/addMovie',
