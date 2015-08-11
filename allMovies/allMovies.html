@@ -8,7 +8,7 @@
     </div>
   </form>
 </div>
-
+<center><img ng-if="isSaving" ng-src="../assets/spiffygif_46x46.gif"></center>
 <div class="show-movies">
   <div class="col-xs-12 col-sm-6 movie-display animate-repeat" ng-repeat="movie in movies | orderBy: 'title' | filter:query as results ">
     <a href="http://localhost:8080/#/movie/{{movie.title}}"><img ng-if="movie.posterUrl" class="movie-img col-xs-3" ng-src="{{movie.posterUrl}}">

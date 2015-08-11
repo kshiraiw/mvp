@@ -4,7 +4,7 @@ app.factory('Movies', function($http) {
   var addMovie = function(movie) {
     return $http({
       method: 'POST',
-      url: 'api/movies/addMovie',
+      url: '/addMovie',
       data: movie
     }).then(function(response) {
       return response;
@@ -12,7 +12,7 @@ app.factory('Movies', function($http) {
   };
 
   var getMovies = function() {
-    return $http.get('api/movies/getMovies')
+    return $http.get('/getMovies')
     .then(function(response) {
       return response;
     });
@@ -21,7 +21,7 @@ app.factory('Movies', function($http) {
   var getMovie = function(title) {
     return $http({
       method: 'POST',
-      url: 'api/movies/getMovie',
+      url: '/getMovie',
       data: {title: title}
     }).then(function(response) {
       return response;
@@ -31,7 +31,7 @@ app.factory('Movies', function($http) {
   var searchTrailer = function(title) {
     return $http({
       method: 'POST',
-      url: 'api/movies/searchTrailer',
+      url: '/searchTrailer',
       data: {title: title}
     }).then(function(response) {
       return response;
