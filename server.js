@@ -9,10 +9,10 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-app.post('/addMovie', helpers.handleAdd);
-app.post('/getMovie', helpers.handleGetOne);
-app.post('/searchTrailer', helpers.searchTrailer);
-app.get('/getMovies', helpers.handleGetAll);
+app.post('api/movies/addMovie', helpers.handleAdd);
+app.post('api/movies/getMovie', helpers.handleGetOne);
+app.post('api/movies/searchTrailer', helpers.searchTrailer);
+app.get('api/movies/getMovies', helpers.handleGetAll);
 
 var port = process.env.PORT || 8080;
 app.listen(port, function() {
