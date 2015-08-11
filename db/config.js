@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-var mongooseConnection = process.env.CUSTOMCONNSTR_MONGOLAB_URI || 'mongodb://localhost/movies';
+var mongooseConnection = process.env.MONGOLAB_URI || 'mongodb://localhost/movies';
 mongoose.connect(mongooseConnection);
 
 var db = mongoose.connection;

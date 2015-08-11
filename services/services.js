@@ -2,10 +2,9 @@ var app = angular.module('app.services', []);
 
 app.factory('Movies', function($http) {
   var addMovie = function(movie) {
-    console.log("adding movie", movie)
     return $http({
       method: 'POST',
-      url: 'http://localhost:8080/addMovie',
+      url: 'api/movies/addMovie',
       data: movie
     }).then(function(response) {
       return response;
@@ -13,7 +12,7 @@ app.factory('Movies', function($http) {
   };
 
   var getMovies = function() {
-    return $http.get('http://localhost:8080/getMovies')
+    return $http.get('api/movies/getMovies')
     .then(function(response) {
       return response;
     });
@@ -22,7 +21,7 @@ app.factory('Movies', function($http) {
   var getMovie = function(title) {
     return $http({
       method: 'POST',
-      url: 'http://localhost:8080/getMovie',
+      url: 'api/movies/getMovie',
       data: {title: title}
     }).then(function(response) {
       return response;
@@ -32,7 +31,7 @@ app.factory('Movies', function($http) {
   var searchTrailer = function(title) {
     return $http({
       method: 'POST',
-      url: 'http://localhost:8080/searchTrailer',
+      url: 'api/movies/searchTrailer',
       data: {title: title}
     }).then(function(response) {
       return response;
