@@ -2,7 +2,7 @@ var Movie = require('../db/config');
 var request = require('request');
 var YouTube = require('youtube-node');
 var youTube = new YouTube();
-youTube.setKey(YOUTUBE_KEY);
+youTube.setKey(process.env.YOUTUBE_KEY);
 
 module.exports.handleAdd = function(req, res) {
   var val = req.body.title;
