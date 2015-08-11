@@ -9,7 +9,7 @@ app.controller('movieCtrl', function($scope, $sce, $stateParams, Movies) {
     }
     $scope.isLoaded = true;
     if ($scope.movie.location) {
-        $scope.path = "https://www.google.com/maps/embed/v1/place?key=" + window.key + "&q=" + $scope.movie.location;
+        $scope.path = "https://www.google.com/maps/embed/v1/place?key=" + MAPS_KEY + "&q=" + $scope.movie.location;
         $scope.url = $sce.trustAsResourceUrl($scope.path);
       }
   }).then(function () {

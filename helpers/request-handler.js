@@ -1,9 +1,8 @@
 var Movie = require('../db/config');
 var request = require('request');
-var key = require('../key');
 var YouTube = require('youtube-node');
 var youTube = new YouTube();
-youTube.setKey(key);
+youTube.setKey(YOUTUBE_KEY);
 
 module.exports.handleAdd = function(req, res) {
   var val = req.body.title;
