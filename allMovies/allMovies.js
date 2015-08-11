@@ -12,5 +12,9 @@ app.controller('allMoviesCtrl', function($scope, Movies, $location) {
         $location.path('/movie/' + movie.data.title);
       });
     };
+
+    $scope.reroute = function(title) {
+      $location.path('/movie/' + title);
+    }
   });
 });
