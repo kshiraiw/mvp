@@ -1,8 +1,10 @@
 var Movie = require('../db/config');
-var keys = require('../key');
 var request = require('request');
 var YouTube = require('youtube-node');
 var youTube = new YouTube();
+if (!process.env.PORT) {
+  var keys = require('../key');
+}
 var youtube_key = process.env.YOUTUBE_KEY || keys.youtube;
 youTube.setKey(youtube_key);
 
