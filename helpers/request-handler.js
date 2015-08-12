@@ -1,8 +1,10 @@
 var Movie = require('../db/config');
+var keys = require('../key');
 var request = require('request');
 var YouTube = require('youtube-node');
 var youTube = new YouTube();
-youTube.setKey(process.env.YOUTUBE_KEY);
+var youtube_key = process.env.YOUTUBE_KEY || keys.youtube;
+youTube.setKey(youtube_key);
 
 module.exports.handleAdd = function(req, res) {
   var val = req.body.title;
@@ -17,17 +19,19 @@ module.exports.handleAdd = function(req, res) {
 
         if (!body[0]) {res.send(null);}
 
-        var poster_url = "http://http://api.themoviedb.org/3/search/movie?api_key=" + process.env.MOVIEDB_KEY + "&query=" + val;
+        var moviedb = process.env.MOVIEDB_KEY || keys.moviedb;
+        var poster_url = "http://api.themoviedb.org/3/search/movie?api_key=" + moviedb + "&query=" + val;
 
         request(poster_url, function(err2, resp2, body2) {
-          console.log(body2);
+          body2 = JSON.parse(body2);
+
           new Movie({
             title: body[0].title,
             location: body[0].filmingLocations.join(' '),
             plot: body[0].simplePlot,
             rating: body[0].rated,
             IMDBurl: body[0].urlIMDB,
-            posterUrl: "http://image.tmdb.org/t/p/w500" + body2.results.poster_path
+            posterUrl: "http://image.tmdb.org/t/p/w300" + body2.results[0].poster_path
           }).save(function(err, movie) {
             res.status(200).send(movie);
           });

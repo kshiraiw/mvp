@@ -6,7 +6,6 @@ app.controller('allMoviesCtrl', function($scope, Movies, $location) {
     $scope.query = {};
     $scope.sendMovie = function() {
       $scope.isSaving = true;
-      console.log($scope.query, "QUERY")
       Movies.addMovie($scope.query).then(function(movie) {
         $scope.isSaving = false;
         $location.path('/movie/' + movie.data.title);
@@ -15,6 +14,6 @@ app.controller('allMoviesCtrl', function($scope, Movies, $location) {
 
     $scope.reroute = function(title) {
       $location.path('/movie/' + title);
-    }
+    };
   });
 });
