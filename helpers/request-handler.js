@@ -16,15 +16,20 @@ module.exports.handleAdd = function(req, res) {
         body = JSON.parse(body);
 
         if (!body[0]) {res.send(null);}
-        new Movie({
-          title: body[0].title,
-          location: body[0].filmingLocations.join(' '),
-          plot: body[0].simplePlot,
-          rating: body[0].rated,
-          IMDBurl: body[0].urlIMDB,
-          posterUrl: body[0].urlPoster
-        }).save(function(err, movie) {
-          res.status(200).send(movie);
+
+        var poster_url = "http://http://api.themoviedb.org/3/search/movie?api_key=" + process.env.MOVIEDB_KEY + "&query=" + val;
+
+        request(poster_url, function(err2, resp2, body2) {
+          new Movie({
+            title: body[0].title,
+            location: body[0].filmingLocations.join(' '),
+            plot: body[0].simplePlot,
+            rating: body[0].rated,
+            IMDBurl: body[0].urlIMDB,
+            posterUrl: "http://image.tmdb.org/t/p/w500" + body2.results.poster_path
+          }).save(function(err, movie) {
+            res.status(200).send(movie);
+          });
         });
       });
     }
