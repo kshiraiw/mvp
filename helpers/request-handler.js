@@ -20,6 +20,7 @@ module.exports.handleAdd = function(req, res) {
         var poster_url = "http://http://api.themoviedb.org/3/search/movie?api_key=" + process.env.MOVIEDB_KEY + "&query=" + val;
 
         request(poster_url, function(err2, resp2, body2) {
+          console.log(body2);
           new Movie({
             title: body[0].title,
             location: body[0].filmingLocations.join(' '),
