@@ -18,13 +18,15 @@ module.exports.handleAdd = function(req, res) {
 
       request(url, function(err, resp, body) {
         body = JSON.parse(body);
-
         if (!body[0]) {res.send(null);}
 
         var moviedb = process.env.MOVIEDB_KEY || keys.moviedb;
         var poster_url = "http://api.themoviedb.org/3/search/movie?api_key=" + moviedb + "&query=" + val;
 
         request(poster_url, function(err2, resp2, body2) {
+          if (err2) {
+            console.log(err2)
+          }
           body2 = JSON.parse(body2);
 
           new Movie({

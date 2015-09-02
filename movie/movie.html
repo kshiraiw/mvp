@@ -8,20 +8,20 @@
       <p ng-show="movie.rating">Rated: {{movie.rating}}</p>
       <a href="{{movie.IMDBurl}}">More info on IMDB</a>
     </div>
-    <div ng-if="movie.posterUrl" class="col-sm-6">
-      <center><img ng-src="{{movie.posterUrl}}"></center>
+    <div ng-if="movie.posterUrl" class="col-sm-6 col-xs-10 col-xs-offset-1">
+      <img class="movie-poster center-block" ng-src="{{movie.posterUrl}}">
     </div>
     <div>
-      <div ng-class="trailer ? 'col-sm-6' : 'col-sm-12'">
+      <div ng-class="col-xs-10 trailer ? 'col-sm-6' : 'col-sm-12'">
         <center>
-          <iframe ng-show="movie.location" width="500" height="400"
+          <iframe ng-show="movie.location" 
             frameborder="0" style="border:0"
             ng-src="{{url}}"
           ></iframe>
         </center>
       </div>
-      <div ng-class="movie.location ? 'col-sm-6' : 'col-sm-12'">
-        <center><iframe title="YouTube" width="500" height="400" ng-src="{{trailerUrl}}" frameborder="0" allowfullscreen></iframe></center>
+      <div ng-class="col-xs-10 movie.location ? 'col-sm-6' : 'col-sm-12'">
+        <center><iframe title="YouTube" ng-src="{{trailerUrl}}" frameborder="0" allowfullscreen></iframe></center>
       </div>
     </div>
   </div>

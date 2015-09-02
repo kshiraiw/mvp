@@ -12,7 +12,7 @@
   <div class="col-xs-12 col-sm-6 movie-display animate-repeat" ng-repeat="movie in movies | orderBy: 'title' | filter:query as results ">
     <a ng-click="reroute(movie.title)"><img ng-if="movie.posterUrl" class="movie-img col-xs-3" ng-src="{{movie.posterUrl}}">
     <img ng-if="!movie.posterUrl" class="movie-img col-xs-3" src="../assets/redirect_icon.gif">
-    <p class="movie-info col-xs-8"><strong>{{movie.title}}</strong></p>
+    <p class="movie-info col-xs-9"><strong>{{movie.title}}</strong></p>
     </a>
     <div class="inner-padding"></div>
   </div>
