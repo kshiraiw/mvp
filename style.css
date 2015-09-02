@@ -12,7 +12,14 @@
   max-height: 150px;
   width:auto;
   line-height:1.5;
-  box-sizing:border-box;
+  box-sizing: border-box;
+}
+
+p.movie-info{
+  position: absolute;
+  top: 10px;
+  right: -10px;
+  padding-top:10px;
 }
 
 .movie-info strong {
@@ -22,6 +29,7 @@
 }
 
 .movie-display {
+  position: relative;
   height: 150px;
   margin: 10px 0;
   display: inline-block;
@@ -40,10 +48,18 @@
   left: -15px;
 }
 
+.box{
+  display: inline-block;
+}
+
+
+.box:first-child {
+  margin-right: 5vw;
+}
 iframe {
   margin: 20px 0;
-  width: 100%;
-  height: auto;
+  width: 35vw;
+  height: 35vw;
 }
 
 .nav {
@@ -71,16 +87,39 @@ iframe {
   max-height:150px;
 }
 
+@media (min-width: 501px) and (max-width: 768px) {
+  .movie-poster{
+    width: 70%;
+  }
+
+  .box {
+    margin-left: 10vw;
+  }
+  iframe {
+    width: 80vw;
+    height: 80vw;
+  }
+}
+
 @media (max-width: 500px) {
   .movie-img {
     padding: 0;
   }
   .movie-info {
+    position: static;
     padding: 10px;
     width: 50%;
   }
   .movie-poster {
     margin: 0 auto;
     width: 100%;
+  }
+  .box {
+    margin-left: 5vw;
+  }
+
+  iframe {
+    width: 90vw;
+    height: 90vw;
   }
 }
